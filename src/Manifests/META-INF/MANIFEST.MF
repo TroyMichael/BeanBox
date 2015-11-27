@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: Name: /filter/implementedFilters/LoadImageFilter.class
+Java-Bean: True
+
