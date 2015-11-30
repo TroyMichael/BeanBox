@@ -1,12 +1,11 @@
-package filter.implementedFilters;
+package Bean;
 
 import dataContainers.Image;
 import filter.AbstractFilter;
-import interfaces.*;
+import interfaces.Writeable;
 import interfaces.Readable;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.StreamCorruptedException;
 import java.security.InvalidParameterException;
 
@@ -17,9 +16,9 @@ import java.security.InvalidParameterException;
 public class LoadImageFilter extends AbstractFilter <String, Image> {
     private String _imagePath;
     private Image _image;
-    private Color _color = Color.PINK;
 
     public LoadImageFilter() {
+
     }
 
     public LoadImageFilter(Readable<String> input) throws InvalidParameterException {
@@ -73,13 +72,5 @@ public class LoadImageFilter extends AbstractFilter <String, Image> {
 
     public void setImage(Image image) {
         _image = image;
-    }
-
-    public Color getColor() {
-        return _color;
-    }
-
-    public void setColor(Color color) {
-        _color = color;
     }
 }

@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Main-Class: Main
 
-Name: LoadImageFilter.class
+Name: Bean.LoadImageFilter.class
 Java-Bean: True

@@ -4,10 +4,11 @@ import interfaces.IOable;
 import interfaces.Readable;
 import interfaces.Writeable;
 
+import java.io.Serializable;
 import java.io.StreamCorruptedException;
 import java.security.InvalidParameterException;
 
-public abstract class AbstractFilter<in, out> implements IOable<in, out>, Runnable {
+public abstract class AbstractFilter<in, out> implements IOable<in, out>, Runnable, Serializable {
     private Readable<in> m_Input = null;
     private Writeable<out> m_Output = null;
     
