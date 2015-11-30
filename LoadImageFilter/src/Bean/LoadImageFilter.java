@@ -53,24 +53,13 @@ public class LoadImageFilter extends AbstractFilter <String, Image> {
     }
 
     @Override
-    public void process() {
-        _image = new Image(_imagePath);
-        JOptionPane.showMessageDialog(null, _image.getImage().toIcon(), "Result", JOptionPane.PLAIN_MESSAGE);
-    }
+   public void process() {
+    _image = new Image(_imagePath);
+    JOptionPane.showMessageDialog(null, _image.getImage().toIcon(), "Result", JOptionPane.PLAIN_MESSAGE);
+}
 
     public String getImagePath() {
         return _imagePath;
     }
 
-    public void setImagePath(String imagePath) {
-        _imagePath = imagePath;
-    }
-
-    public Image getImage() {
-        return _image;
-    }
-
-    public void setImage(Image image) {
-        _image = image;
-    }
 }
