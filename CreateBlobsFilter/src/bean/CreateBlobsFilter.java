@@ -1,4 +1,4 @@
-package filter.implementedFilters;
+package bean;
 
 import Catalano.Imaging.Tools.Blob;
 import Catalano.Imaging.Tools.BlobDetection;

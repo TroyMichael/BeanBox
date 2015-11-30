@@ -1,4 +1,4 @@
-package filter.implementedFilters;
+package bean;
 
 import Catalano.Core.IntRange;
 import Catalano.Imaging.Filters.ReplaceColor;

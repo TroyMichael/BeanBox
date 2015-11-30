@@ -1,4 +1,4 @@
-package filter.implementedFilters;
+package bean;
 
 import dataContainers.Image;
 import filter.AbstractFilter;

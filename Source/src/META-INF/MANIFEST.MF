@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
 
-Name: Bean/Source.class
-Java-Bean: True
+Name: bean/Source.class
+Java-bean: True
