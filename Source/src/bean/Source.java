@@ -3,24 +3,21 @@ package bean;
 import dataContainers.ListenerHandler;
 import utils.ImageEvent;
 import utils.ImageListener;
+import utils.iListenerHandler;
 
 import java.awt.event.ActionEvent;
 import java.io.Serializable;
-import java.util.EventListener;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by KYUSS on 19.11.2015.
 
  */
-public class Source implements ImageListener, Serializable {
+public class Source implements ImageListener, Serializable, iListenerHandler {
 
-    private String _imagePath = "";
-    private ListenerHandler _listeners;
+    private String _imagePath = "loetstellen.jpg";
+    private ListenerHandler _listeners = new ListenerHandler();
 
     public Source(){
-        _listeners = new ListenerHandler();
     }
 
     public String getImagePath() {
@@ -31,16 +28,7 @@ public class Source implements ImageListener, Serializable {
         _imagePath = imagePath;
     }
 
-    public void addEventListener (LoadImageFilter eventListener) {
-        _listeners.addListener(eventListener);
-    }
-
-    public void removeEventListener (LoadImageFilter eventListener){
-        _listeners.removeListener(eventListener);
-    }
-
     public void start(ActionEvent e) {
-        System.out.println("hallo action");
         ImageEvent event = new ImageEvent(this);
         onImage(event);
     }
@@ -49,5 +37,15 @@ public class Source implements ImageListener, Serializable {
     public void onImage(ImageEvent e) {
         e.setImagePath(_imagePath);
         _listeners.notifyAllListener(e);
+    }
+
+    @Override
+    public void addListener(ImageListener listener) {
+        _listeners.addListener(listener);
+    }
+
+    @Override
+    public void removeListener(ImageListener listener) {
+        _listeners.removeListener(listener);
     }
 }

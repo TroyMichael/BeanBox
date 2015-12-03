@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BeanBox.iml" filepath="$PROJECT_DIR$/BeanBox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CountBallsFilter/CountBallsFilter.iml" filepath="$PROJECT_DIR$/CountBallsFilter/CountBallsFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CreateBlobsFilter/CreateBlobsFilter.iml" filepath="$PROJECT_DIR$/CreateBlobsFilter/CreateBlobsFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DefineROIFilter/DefineROIFilter.iml" filepath="$PROJECT_DIR$/DefineROIFilter/DefineROIFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DisplayFilter/DisplayFilter.iml" filepath="$PROJECT_DIR$/DisplayFilter/DisplayFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoadImageFilter/LoadImageFilter.iml" filepath="$PROJECT_DIR$/LoadImageFilter/LoadImageFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MedianFilter/MedianFilter.iml" filepath="$PROJECT_DIR$/MedianFilter/MedianFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OpeningFilter/OpeningFilter.iml" filepath="$PROJECT_DIR$/OpeningFilter/OpeningFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SaveScreenshotFilter/SaveScreenshotFilter.iml" filepath="$PROJECT_DIR$/SaveScreenshotFilter/SaveScreenshotFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SegmentationFilter/SegmentationFilter.iml" filepath="$PROJECT_DIR$/SegmentationFilter/SegmentationFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Shared/Shared.iml" filepath="$PROJECT_DIR$/Shared/Shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sink/Sink.iml" filepath="$PROJECT_DIR$/Sink/Sink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Source/Source.iml" filepath="$PROJECT_DIR$/Source/Source.iml" />
+    </modules>
+  </component>
+</project>
