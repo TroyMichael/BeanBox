@@ -19,6 +19,7 @@ public class Sink extends AbstractFilter<Image, Object> {
     }
 
     public Sink() {}
+
     @Override
     public void process() {
 

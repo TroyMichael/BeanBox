@@ -19,6 +19,8 @@ public class SegmentationFilter extends AbstractFilter <Image, Image>{
 
     private Image _image;
 
+    public SegmentationFilter(){}
+
     public SegmentationFilter(Readable<Image> input) throws InvalidParameterException {
         super(input);
     }

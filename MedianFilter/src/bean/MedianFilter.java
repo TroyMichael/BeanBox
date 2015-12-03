@@ -18,6 +18,8 @@ public class MedianFilter extends AbstractFilter <Image, Image>{
 
     private Image _image;
 
+    public MedianFilter(){}
+
     public MedianFilter(Readable<Image> input) throws InvalidParameterException {
         super(input);
     }

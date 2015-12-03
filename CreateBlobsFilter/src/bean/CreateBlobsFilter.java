@@ -6,6 +6,8 @@ import dataContainers.Image;
 import filter.AbstractFilter;
 import interfaces.*;
 import interfaces.Readable;
+import utils.ImageEvent;
+import utils.ImageListener;
 
 import java.io.StreamCorruptedException;
 import java.security.InvalidParameterException;
@@ -16,9 +18,13 @@ import java.util.List;
  * Created by a1aharsim on 17.11.2015.
  *
  */
-public class CreateBlobsFilter extends AbstractFilter <Image, Image>{
+public class CreateBlobsFilter extends AbstractFilter <Image, Image> implements ImageListener{
 
     private Image _image;
+
+    public CreateBlobsFilter() {
+
+    }
 
     public CreateBlobsFilter(Readable<Image> input) throws InvalidParameterException {
         super(input);
@@ -71,5 +77,10 @@ public class CreateBlobsFilter extends AbstractFilter <Image, Image>{
         _image = image;
         process();
         writeOutput(image);
+    }
+
+    @Override
+    public void onImage(ImageEvent e) {
+
     }
 }

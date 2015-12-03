@@ -18,6 +18,8 @@ public class OpeningFilter extends AbstractFilter <Image, Image>{
 
     private Image _image;
 
+    public OpeningFilter(){}
+
     public OpeningFilter(Readable<Image> input) throws InvalidParameterException {
         super(input);
     }

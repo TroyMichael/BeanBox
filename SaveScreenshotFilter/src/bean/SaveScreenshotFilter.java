@@ -16,6 +16,8 @@ public class SaveScreenshotFilter extends AbstractFilter <Image, Image> {
 
     private Image _image;
 
+    public SaveScreenshotFilter(){}
+
     public SaveScreenshotFilter(Readable<Image> input) throws InvalidParameterException {
         super(input);
     }

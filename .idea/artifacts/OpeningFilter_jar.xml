@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="OpeningFilter:jar">
+    <output-path>$PROJECT_DIR$/../../JavaBean-Box/jars</output-path>
+    <root id="archive" name="OpeningFilter.jar">
+      <element id="module-output" name="OpeningFilter" />
+      <element id="module-output" name="Shared" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Fuzzy.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Graph.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Image.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.IO.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.MachineLearning.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Math.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Neuro.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Signal.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Statistics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Catalano/Libs/Catalano.Vision.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
