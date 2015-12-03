@@ -1,44 +1,24 @@
 package bean;
 
 
-import dataContainers.Image;
-import filter.AbstractFilter;
-import interfaces.Readable;
-
-import java.io.StreamCorruptedException;
+import utils.ImageEvent;
+import utils.ImageListener;
 
 /**
  * Created by Michael on 22.11.2015.
  *
  */
 
-public class Sink extends AbstractFilter<Image, Object> {
-
-    public Sink(Readable<Image> input) {
-        super(input);
-    }
+public class Sink implements ImageListener {
 
     public Sink() {}
 
-    @Override
     public void process() {
-
-    }
-
-    @Override
-    public Object read() throws StreamCorruptedException {
-        readInput();
         System.out.println("Finished");
-        return null;
     }
 
     @Override
-    public void run() {
-
-    }
-
-    @Override
-    public void write(Image value) throws StreamCorruptedException {
-
+    public void onImage(ImageEvent e) {
+        process();
     }
 }

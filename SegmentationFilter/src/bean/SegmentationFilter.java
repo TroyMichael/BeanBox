@@ -3,37 +3,21 @@ package bean;
 import Catalano.Core.IntRange;
 import Catalano.Imaging.Filters.ReplaceColor;
 import dataContainers.Image;
-import filter.AbstractFilter;
-import interfaces.*;
-import interfaces.Readable;
+import utils.ImageEvent;
+import utils.ImageListener;
 
 import javax.swing.*;
-import java.io.StreamCorruptedException;
-import java.security.InvalidParameterException;
 
 /**
  * Created by a1aharsim on 17.11.2015.
  *
  */
-public class SegmentationFilter extends AbstractFilter <Image, Image>{
+public class SegmentationFilter implements ImageListener{
 
     private Image _image;
 
     public SegmentationFilter(){}
 
-    public SegmentationFilter(Readable<Image> input) throws InvalidParameterException {
-        super(input);
-    }
-
-    public SegmentationFilter(Writeable<Image> output) throws InvalidParameterException {
-        super(output);
-    }
-
-    public SegmentationFilter(Readable<Image> input, Writeable<Image> output) throws InvalidParameterException {
-        super(input, output);
-    }
-
-    @Override
     public void process() {
         //set colorRange of which including color should be replaced and define a ReplaceColor object
         IntRange colorRange = new IntRange(0, 37);
@@ -45,20 +29,7 @@ public class SegmentationFilter extends AbstractFilter <Image, Image>{
     }
 
     @Override
-    public Image read() throws StreamCorruptedException {
-        _image = readInput();
+    public void onImage(ImageEvent e) {
         process();
-        return _image;
-    }
-
-    @Override
-    public void run() {
-    }
-
-    @Override
-    public void write(Image image) throws StreamCorruptedException {
-        _image = image;
-        process();
-        writeOutput(_image);
     }
 }

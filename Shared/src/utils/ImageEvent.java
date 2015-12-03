@@ -1,6 +1,7 @@
 package utils;
 
 import Catalano.Imaging.FastBitmap;
+import dataContainers.Image;
 
 import java.util.EventObject;
 
@@ -10,7 +11,7 @@ import java.util.EventObject;
  */
 public class ImageEvent extends EventObject{
 
-    private FastBitmap _image;
+    private Image _image;
     private String _imagePath;
 
     /**
@@ -19,16 +20,20 @@ public class ImageEvent extends EventObject{
      * @param source The object on which the Event initially occurred.
      * @throws IllegalArgumentException if source is null.
      */
-    public ImageEvent(Object source, FastBitmap image) {
+    public ImageEvent(Object source, Image image) {
         super(source);
         _image = image;
     }
 
-    public FastBitmap getImage() {
+    public ImageEvent(Object source) {
+        super(source);
+    }
+
+    public Image getImage() {
         return _image;
     }
 
-    public void setImage(FastBitmap image) {
+    public void setImage(Image image) {
         _image = image;
     }
 

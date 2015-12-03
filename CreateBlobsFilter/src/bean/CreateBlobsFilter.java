@@ -3,14 +3,9 @@ package bean;
 import Catalano.Imaging.Tools.Blob;
 import Catalano.Imaging.Tools.BlobDetection;
 import dataContainers.Image;
-import filter.AbstractFilter;
-import interfaces.*;
-import interfaces.Readable;
 import utils.ImageEvent;
 import utils.ImageListener;
 
-import java.io.StreamCorruptedException;
-import java.security.InvalidParameterException;
 import java.util.Comparator;
 import java.util.List;
 
@@ -18,7 +13,7 @@ import java.util.List;
  * Created by a1aharsim on 17.11.2015.
  *
  */
-public class CreateBlobsFilter extends AbstractFilter <Image, Image> implements ImageListener{
+public class CreateBlobsFilter implements ImageListener{
 
     private Image _image;
 
@@ -26,19 +21,6 @@ public class CreateBlobsFilter extends AbstractFilter <Image, Image> implements 
 
     }
 
-    public CreateBlobsFilter(Readable<Image> input) throws InvalidParameterException {
-        super(input);
-    }
-
-    public CreateBlobsFilter(Writeable<Image> output) throws InvalidParameterException {
-        super(output);
-    }
-
-    public CreateBlobsFilter(Readable<Image> input, Writeable<Image> output) throws InvalidParameterException {
-        super(input, output);
-    }
-
-    @Override
     public void process() {
         //detect blobs
         _image.getImage().toGrayscale();
@@ -61,26 +43,7 @@ public class CreateBlobsFilter extends AbstractFilter <Image, Image> implements 
     }
 
     @Override
-    public Image read() throws StreamCorruptedException {
-        _image = readInput();
-        process();
-        return _image;
-    }
-
-    @Override
-    public void run() {
-
-    }
-
-    @Override
-    public void write(Image image) throws StreamCorruptedException {
-        _image = image;
-        process();
-        writeOutput(image);
-    }
-
-    @Override
     public void onImage(ImageEvent e) {
-
+        process();
     }
 }
